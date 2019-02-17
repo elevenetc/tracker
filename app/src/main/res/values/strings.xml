@@ -2,5 +2,8 @@
     <string name="app_name">Tracker</string>
     <string name="tracker_notification_title">Tracker</string>
     <string name="tracker_notification_content">Tracker</string>
+    <string name="kkk">Tracker</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
 
 </resources>

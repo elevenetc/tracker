@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class TrackerActivity : AppCompatActivity() {
 
@@ -16,9 +15,9 @@ class TrackerActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        findViewById(R.id.btn_start_tracking).setOnClickListener(View.OnClickListener { startTrackerService() })
+        findViewById<View>(R.id.btn_start_tracking).setOnClickListener { startTrackerService() }
 
-        findViewById(R.id.btn_stop_tracking).setOnClickListener(View.OnClickListener { stopService() })
+        findViewById<View>(R.id.btn_stop_tracking).setOnClickListener { stopService() }
     }
 
     private fun startTrackerService() {
@@ -28,7 +27,6 @@ class TrackerActivity : AppCompatActivity() {
         } else {
             startService(Intent(this, TrackerService::class.java))
         }
-
     }
 
 
