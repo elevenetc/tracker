@@ -16,8 +16,12 @@ class TrackerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<View>(R.id.btn_start_tracking).setOnClickListener { startTrackerService() }
-
         findViewById<View>(R.id.btn_stop_tracking).setOnClickListener { stopService() }
+        findViewById<View>(R.id.btn_open_map).setOnClickListener { openMap() }
+    }
+
+    private fun openMap() {
+        startActivity(Intent(this, MapsActivity::class.java))
     }
 
     private fun startTrackerService() {

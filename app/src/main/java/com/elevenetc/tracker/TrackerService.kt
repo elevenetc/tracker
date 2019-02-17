@@ -51,7 +51,7 @@ class TrackerService : Service() {
         showNotification()
 
         val request = LocationRequest()
-        request.interval = 1000
+        request.interval = 1000 * 10
         request.priority = PRIORITY_HIGH_ACCURACY
         locClient.requestLocationUpdates(request, listener, null)
     }
